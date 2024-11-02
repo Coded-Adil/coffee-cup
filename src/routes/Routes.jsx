@@ -15,11 +15,11 @@ const routes = createBrowserRouter([
         },
         {
             path: '/coffees',
-            element: <Coffees/>
+            element: <Coffees/>,
         },
         {
             path: '/dashboard',
-            element: <Dashboard/>
+            element: <Dashboard/>,
         },
       ],
     },
