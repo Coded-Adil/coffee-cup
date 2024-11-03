@@ -19,7 +19,7 @@ const CoffeeCards = () => {
     }, [category, data])
     return (
         <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-12">
                 {
                     coffees.map(coffee => <Card key={coffee.id} coffee={coffee} />)
                 }
