@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { IoTrash } from "react-icons/io5";
+
 
 /* eslint-disable react/prop-types */
-const Card = ({ coffee }) => {
+const Card = ({ coffee, handleRemove }) => {
+    const {pathname} = useLocation()
     const { name, image, category, origin, type, id, rating, popularity } = coffee || {}
     return (
         <div className="flex relative">
@@ -35,6 +38,7 @@ const Card = ({ coffee }) => {
                     </p>
                 </div>
             </Link>
+            {pathname === '/dashboard' && <div onClick={() => handleRemove(id)} className="absolute text-3xl p-3 border-2 rounded-full bg-warning cursor-pointer -top-5 -right-5"><IoTrash /></div>}
         </div>
     );
 };
